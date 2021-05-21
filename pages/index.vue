@@ -4,7 +4,7 @@
       <div class="min-h-screen text-center">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" />
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-        <div class="px-4 py-2 w-full flex flex-col min-h-screen align-bottom text-left overflow-hidden transform transition-all bg-gray-200 dark:bg-gray-800 sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+        <div class="px-4 py-2 w-full flex sm:inline-flex flex-col min-h-screen align-bottom text-left overflow-hidden transform transition-all bg-gray-200 dark:bg-gray-800 sm:align-middle sm:max-w-lg sm:w-full">
           <div class="px-4 pt-2 pb-4 border-b border-gray-600 flex">
             <img
               :src="projects[currentIndex].image"
