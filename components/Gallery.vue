@@ -9,10 +9,10 @@
     <div
       v-for="(project, index) of projects"
       :key="project.slug"
-      class="project pb-2 pl-4 last:pr-4"
+      class="project pb-2 pl-4 first:pl-16 last:pr-16"
       @click="selectProject(index)"
     >
-      <h2 class="w-48 pb-1 text-blue-700 dark:text-green-600 text-lg truncate px-2">
+      <h2 class="w-48 pb-1 text-lg truncate px-2">
         {{ project.title }}
       </h2>
       <div class="image-wrapper bg-transparent p-2 rounded">
@@ -72,14 +72,19 @@ export default {
 <style scoped>
 .project h2 {
   visibility: hidden;
+  color: #26A69A;
 }
-.project:hover .image-wrapper {
-  @apply bg-blue-700 shadow-md;
-}
-.dark .project:hover .image-wrapper {
-  @apply bg-green-600;
+.dark .project h2 {
+  color: #00BCD4;
 }
 .project:hover h2 {
   visibility: visible;
+}
+.project:hover .image-wrapper {
+  @apply shadow-md;
+  background-color: #26A69A;
+}
+.dark .project:hover .image-wrapper {
+  background-color: #00BCD4;
 }
 </style>
