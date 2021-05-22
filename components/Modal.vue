@@ -8,13 +8,13 @@
           <img
             :src="project.image"
             :alt="project"
-            class="w-24 h-24 mr-4"
+            class="w-24 h-24 mr-4 object-center object-cover"
           >
           <div class="flex flex-col justify-end">
             <h2 class="text-lg">
               {{ project.title }}
             </h2>
-            <div class="text-sm text-gray-500">
+            <div class="text-sm text-gray-500 dark:text-gray-400">
               {{ project.createdAt | toDate }}
             </div>
           </div>

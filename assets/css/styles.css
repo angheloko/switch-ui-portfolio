@@ -1,0 +1,14 @@
+.nuxt-content p {
+  @apply my-4;
+}
+.nuxt-content a {
+  text-decoration: underline;
+  color: #26A69A;
+}
+.dark .nuxt-content a {
+  color: #00BCD4;
+}
+
+.nuxt-content code {
+  @apply bg-gray-500 rounded-sm text-sm py-0.5 px-1;
+}

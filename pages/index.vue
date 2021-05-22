@@ -8,7 +8,7 @@
     />
     <div class="h-16 m-4 mb-0 px-4 sm:m-8 flex justify-between items-center">
       <div class="p-1 bg-white dark:bg-gray-600 shadow rounded-full">
-        <img src="https://picsum.photos/100/100" class="w-14 h-14 object-cover object-center rounded-full" alt="Avatar">
+        <img src="avatar.jpg" class="w-14 h-14 object-cover object-center rounded-full" alt="Avatar">
       </div>
       <button class="focus:outline-none" @click="toggleTheme">
         <LightMode v-if="isDark" class="h-8 w-8 fill-current" />
