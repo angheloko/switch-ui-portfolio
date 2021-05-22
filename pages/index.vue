@@ -22,29 +22,29 @@
       />
       <div class="mt-6 flex justify-center items-center">
         <div class="flex text-gray-600">
-          <div class="p-2 mx-2 bg-white rounded-full shadow">
+          <div class="p-2 mx-2 bg-white rounded-full shadow dark:bg-gray-600">
             <a href="https://donlalicon.dev">
               <Blog class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-yellow-500" />
             </a>
           </div>
-          <div class="p-2 mx-2 bg-white rounded-full shadow">
+          <div class="p-2 mx-2 bg-white rounded-full shadow dark:bg-gray-600">
             <a href="https://github.com/angheloko">
               <GitHub class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-black" />
             </a>
           </div>
-          <div class="p-2 mx-2 bg-white rounded-full shadow">
+          <div class="p-2 mx-2 bg-white rounded-full shadow dark:bg-gray-600">
             <a href="https://www.linkedin.com/in/dalalicon/">
-              <LinkedIn class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-blue-700" />
+              <LinkedIn class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-blue-700 dark:text-blue-500" />
             </a>
           </div>
-          <div class="p-2 mx-2 bg-white rounded-full shadow">
+          <div class="p-2 mx-2 bg-white rounded-full shadow dark:bg-gray-600">
             <a href="https://twitter.com/DonOrDoNot">
-              <Twitter class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-blue-500" />
+              <Twitter class="w-10 h-10 sm:w-14 sm:h-14 fill-current text-blue-500 dark:text-blue-300" />
             </a>
           </div>
-          <div class="p-2 mx-2 bg-white rounded-full shadow">
+          <div class="p-2 mx-2 bg-white rounded-full shadow dark:bg-gray-600">
             <a href="mailto:dalalicon@gmail.com">
-              <Mail class="w-10 h-10 sm:w-14 sm:h-14 fill-current" />
+              <Mail class="w-10 h-10 sm:w-14 sm:h-14 fill-current dark:text-gray-300" />
             </a>
           </div>
         </div>

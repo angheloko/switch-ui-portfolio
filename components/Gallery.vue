@@ -9,12 +9,12 @@
       @mouseover="focused = index"
       v-touch:start="touchHandler(index)"
     >
-      <h2 class="w-48 pb-1 text-lg truncate px-2">
+      <h2 class="w-48 pb-1 text-lg truncate">
         {{ project.title }}
       </h2>
       <div class="image-wrapper bg-transparent p-2 rounded">
-        <div class="h-48 w-48 flex-none shadow-md hover:shadow-none">
-          <img :src="project.image" :alt="project.title" class="h-full w-full object-cover object-center" draggable="false">
+        <div class="h-48 w-48 flex-none shadow-md">
+          <img :src="project.image" :alt="project.title" class="h-full w-full object-cover object-center rounded" draggable="false">
         </div>
       </div>
     </div>
