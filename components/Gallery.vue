@@ -1,9 +1,9 @@
 <template>
-  <div class="overflow-x-auto mx-2 flex items-start">
+  <div class="overflow-x-auto flex items-start">
     <div
       v-for="(project, index) of projects"
       :key="project.slug"
-      class="project pb-2"
+      class="project pb-2 first:pl-16 last:pr-16"
       :class="{ 'focused': focused === index }"
       @click="clickHandler(index)"
       @mouseover="focused = index"
