@@ -1,16 +1,13 @@
 <template>
-  <div
-    class="flex items-start overflow-x-hidden"
-    :class="{ 'cursor-pointer': isDragging }"
-    @mousedown="mouseDownHandler"
-    @mouseup="mouseUpHandler"
-    @mousemove.prevent="mouseMoveHandler"
-  >
+  <div class="overflow-x-auto mx-2 flex items-start">
     <div
       v-for="(project, index) of projects"
       :key="project.slug"
-      class="project pb-2 pl-4 first:pl-16 last:pr-16"
-      @click="selectProject(index)"
+      class="project pb-2"
+      :class="{ 'focused': focused === index }"
+      @click="clickHandler(index)"
+      @mouseover="focused = index"
+      v-touch:start="touchHandler(index)"
     >
       <h2 class="w-48 pb-1 text-lg truncate px-2">
         {{ project.title }}
@@ -35,35 +32,17 @@ export default {
   },
   data () {
     return {
-      startDrag: false,
-      isDragging: false,
-      left: 0,
-      x: 0
+      focused: 0
     }
   },
   methods: {
-    mouseDownHandler (e) {
-      this.startDrag = true
-      this.x = e.clientX
-      this.left = this.$el.scrollLeft
-    },
-    mouseUpHandler () {
-      setTimeout(() => {
-        this.startDrag = false
-        this.isDragging = false
-      })
-    },
-    mouseMoveHandler (e) {
-      if (this.startDrag) {
-        this.isDragging = true
-        const distance = e.clientX - this.x
-        this.$el.scrollLeft = this.left - distance
+    touchHandler (index) {
+      return () => {
+        this.focused = index
       }
     },
-    selectProject (index) {
-      if (!this.isDragging) {
-        this.$emit('click', index)
-      }
+    clickHandler (index) {
+      this.$emit('click', index)
     }
   }
 }
@@ -77,14 +56,14 @@ export default {
 .dark .project h2 {
   color: #00BCD4;
 }
-.project:hover h2 {
+.project.focused h2 {
   visibility: visible;
 }
-.project:hover .image-wrapper {
+.project.focused .image-wrapper {
   @apply shadow-md;
   background-color: #26A69A;
 }
-.dark .project:hover .image-wrapper {
+.dark .project.focused .image-wrapper {
   background-color: #00BCD4;
 }
 </style>

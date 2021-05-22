@@ -28,7 +28,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/to-date'
+    '@/plugins/to-date',
+    '@/plugins/vue2-touch-events'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
